@@ -47,11 +47,19 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Clock\Scripts\Clock.cs" />
+     <Compile Include="Assets\Padlock\Script\CylinderController.cs" />
+     <Compile Include="Assets\Padlock\Script\PadlockController.cs" />
+     <Compile Include="Assets\Padlock\TestScene\PadlockInputController.cs" />
+     <Compile Include="Assets\PinLockDoor\Scripts\ButtonAction.cs" />
+     <Compile Include="Assets\PinLockDoor\Scripts\DoorControl.cs" />
+     <Compile Include="Assets\PinLockDoor\Scripts\ILockable.cs" />
+     <Compile Include="Assets\PinLockDoor\Scripts\PinCodeControl.cs" />
      <Compile Include="Assets\Scripts\CamMouseLook.cs" />
      <Compile Include="Assets\Scripts\CharacterController.cs" />
      <Compile Include="Assets\Scripts\PauseMenu\Menu.cs" />
      <Compile Include="Assets\Scripts\PauseMenu\ReturnButton.cs" />
      <Compile Include="Assets\Scripts\PlayerRaycast.cs" />
+     <None Include="Assets\PinLockDoor\readme.txt" />
  <Reference Include="Facebook.Unity.Settings">
  <HintPath>/Users/Evelynn/Desktop/Locked-In-Lafferre/Locked in Laferre/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
  </Reference>
