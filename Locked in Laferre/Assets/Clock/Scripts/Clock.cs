@@ -13,8 +13,8 @@ public class Clock : MonoBehaviour {
 //-----------------------------------------------------------------------------------------------------------------------------------------
 
     //-- set start time 00:00
-    public int minutes = 0;
-    public int hour = 0;
+    public int minutes = 00;
+    public int hour = 11;
     
     //-- time speed factor
     public float clockSpeed = 1.0f;     // 1.0f = realtime, < 1.0f = slower, > 1.0f = faster
