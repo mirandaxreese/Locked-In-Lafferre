@@ -29,21 +29,18 @@ using System.Collections;
  * 	"SUBMIT" and "CLEAR" are dedicated strings that are sent to the panelcontrol by specific buttons.
  *  If you intend to build a character keyboard keep that in mind and possibly change them...
  * */
-public class PinCodeControl : MonoBehaviour {
+public class PinCodeControlFiling : MonoBehaviour {
 	// Links to other relevant GameObjects
 	public Text GameObjDisplayText;
 	public GameObject GameObjDoor;
 
 	// settings - change it to your desire
 	public string lockCode = "1234";			// the code to unlock
-	public int maxAttempts = 3;					// attempts until alert
-	public string controlCode = "0815";			// input code to allow the player to change the code
 	public float LockDownTime = 10.0f;			// amount of seconds to lock after failed attempts
 
 	public string DisplayDefault = "IDLE";		// text to display in IDLE mode
 	public string DisplayGranted = "UNLOCKED";	// text to display for access granted
 	public string DisplayDenied = "DENIED";		// text to display for access denied / wrong code
-	public string DisplayAlert = "ALERT";		// text to display for alert / lockdown
 	public string DisplayNewCode = "NEW CODE?";	// text to promt for new code
 
 	// audio soundsources
@@ -55,9 +52,6 @@ public class PinCodeControl : MonoBehaviour {
 	private string inputCode;
 	private int failedAttempts;
 	private bool setNewCode;
-	private bool allowNewCode;
-	private float lockDownStartTime;
-	private bool lockDownActive;
 	private const string ctrlCodeSubmit = "SUBMIT";
 	private const string ctrlCodeClear = "CLEAR";
 	private ILockable availableInterface;
@@ -69,27 +63,10 @@ public class PinCodeControl : MonoBehaviour {
 
 		inputCode = "";
 		failedAttempts = 0;
-		allowNewCode = false;
-		setNewCode = false;
-		lockDownActive = false;
-		UpdateText (DisplayDefault);
-	}
-	
-	// continous checks
-	void Update(){
-		// only run this if we are in lockdown mode
-		if (!lockDownActive)
-			return;
 
-		// reset lockdown after while
-		if (lockDownStartTime + LockDownTime <= Time.time) {
-			lockDownActive = false;
-			UpdateText(DisplayDefault);
-		} else {
-			float restTime = (lockDownStartTime + LockDownTime) - Time.time;
-			//string newText = ;
-			UpdateText(DisplayAlert + " " + Mathf.Floor (restTime).ToString());
-		}
+		setNewCode = false;
+
+		UpdateText (DisplayDefault);
 	}
 
 	// it's public because door hackers should be able to print special text onto the UI
@@ -99,11 +76,6 @@ public class PinCodeControl : MonoBehaviour {
 
 	// an input was made, add it to the input value
 	public void addKeyInput(string key){
-		if (lockDownActive) {
-			UpdateText(DisplayAlert);
-			return;
-		}
-
 		if (key.Equals (ctrlCodeSubmit)) {
 			submit();
 			return;
@@ -124,49 +96,35 @@ public class PinCodeControl : MonoBehaviour {
 			SetCode (inputCode);
 			clearInput();
 			setNewCode = false;
-			allowNewCode = false;
+
 			UpdateText (DisplayDefault);
 			return;
 		}
 
 		if (inputCode.Length == 0) {
 			UpdateText(DisplayDefault);
-			allowNewCode = false;
+
 			clearInput();
-			availableInterface.Lock();
 			return;
 		}
 
 		// check for controlcode first (special case)
-		if (inputCode.Equals (controlCode) && (allowNewCode)) {
-			UpdateText(DisplayNewCode);
-			clearInput();
-			setNewCode = true;
-		} else {
 			if(CheckCode() == false){
 				// failed attempt!
 				failedAttempts += 1;
-				allowNewCode = false;
-				availableInterface.Lock();
+
 				UpdateText(DisplayDenied);
-				if(failedAttempts >= maxAttempts){
-					// alert!
-					UpdateText(DisplayAlert);
-					lockDownStartTime = Time.time;
-					lockDownActive = true;
-				}
 				if(!noAudio)
 					AudioDenied.Play();
 			}else{
 				// grant access and reset attempt counter
 				failedAttempts = 0;
-				allowNewCode = true;
+
 				UpdateText(DisplayGranted);
-				availableInterface.Unlock();
-				if(!noAudio)
+            GameObjDoor.transform.position = new Vector3(GameObjDoor.transform.position.x, 2.533f, GameObjDoor.transform.position.z);
+            if (!noAudio)
 					AudioConfirm.Play ();
 			}
-		}
 		clearInput();
 	}
 

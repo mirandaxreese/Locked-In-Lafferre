@@ -6,7 +6,7 @@ public class CharacterController : MonoBehaviour {
 
     public float speed;
     public GameObject camera;
-    public GameObject pauseMenu;
+    //public GameObject pauseMenu;
 
 	// Use this for initialization
 	void Start () {
@@ -28,7 +28,7 @@ public class CharacterController : MonoBehaviour {
             Cursor.lockState = CursorLockMode.None;
             this.GetComponent<CharacterController>().enabled = false;
             camera.GetComponent<CamMouseLook>().enabled = false;
-            pauseMenu.gameObject.SetActive(true);
+            //pauseMenu.gameObject.SetActive(true);
         }
 	}
 }

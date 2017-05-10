@@ -29,3 +29,4 @@ E:\Users\Jonathon\Documents\Homework\Graphical design\Final Project\Locked-In-La
 E:\Users\Jonathon\Documents\Homework\Graphical design\Final Project\Locked-In-Lafferre\Locked in Laferre\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
 E:\Users\Jonathon\Documents\Homework\Graphical design\Final Project\Locked-In-Lafferre\Locked in Laferre\obj\Debug\Assembly-CSharp.dll
 E:\Users\Jonathon\Documents\Homework\Graphical design\Final Project\Locked-In-Lafferre\Locked in Laferre\obj\Debug\Assembly-CSharp.pdb
+E:\Users\Jonathon\Documents\Homework\Graphical design\Final Project\Locked-In-Lafferre\Locked in Laferre\Temp\bin\Debug\Facebook.Unity.Settings.dll
