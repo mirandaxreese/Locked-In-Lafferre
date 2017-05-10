@@ -1,0 +1,78 @@
+Initialize engine version: 5.6.0f3 (497a0f351392)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 970 (ID=0x13c2)
+    Vendor:   NVIDIA
+    VRAM:     4007 MB
+    Driver:   21.21.13.7563
+Begin MonoManager ReloadAssembly
+Platform assembly: E:\Users\Jonathon\Documents\Homework\Graphical design\Final Project\Locked-In-Lafferre\LockedInLaferre_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading E:\Users\Jonathon\Documents\Homework\Graphical design\Final Project\Locked-In-Lafferre\LockedInLaferre_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: E:\Users\Jonathon\Documents\Homework\Graphical design\Final Project\Locked-In-Lafferre\LockedInLaferre_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading E:\Users\Jonathon\Documents\Homework\Graphical design\Final Project\Locked-In-Lafferre\LockedInLaferre_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: E:\Users\Jonathon\Documents\Homework\Graphical design\Final Project\Locked-In-Lafferre\LockedInLaferre_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading E:\Users\Jonathon\Documents\Homework\Graphical design\Final Project\Locked-In-Lafferre\LockedInLaferre_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: E:\Users\Jonathon\Documents\Homework\Graphical design\Final Project\Locked-In-Lafferre\LockedInLaferre_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading E:\Users\Jonathon\Documents\Homework\Graphical design\Final Project\Locked-In-Lafferre\LockedInLaferre_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+- Completed reload, in  0.011 seconds
+Platform assembly: E:\Users\Jonathon\Documents\Homework\Graphical design\Final Project\Locked-In-Lafferre\LockedInLaferre_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: E:\Users\Jonathon\Documents\Homework\Graphical design\Final Project\Locked-In-Lafferre\LockedInLaferre_Data\Managed\System.dll (this message is harmless)
+desktop: 1920x1080 60Hz; virtual: 3840x1080 at -1920,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 0.554491 ms
+Setting up 4 worker threads for Enlighten.
+  Thread -> id: 624 -> priority: 1 
+  Thread -> id: 2a10 -> priority: 1 
+  Thread -> id: 24d4 -> priority: 1 
+  Thread -> id: 280c -> priority: 1 
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.149943 ms
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 2476.
+Total: 0.420092 ms (FindLiveObjects: 0.082431 ms CreateObjectMapping: 0.026367 ms MarkObjects: 0.255486 ms  DeleteObjects: 0.055551 ms)
+
+I flipped the switch.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Switch1 value 1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Switch1 value 1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Switch3 value 1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Switch4 value 1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+I flipped the switch.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.271030 ms
+
+Unloading 176 unused Assets to reduce memory usage. Loaded Objects now: 313.
+Total: 1.497076 ms (FindLiveObjects: 0.017663 ms CreateObjectMapping: 0.011007 ms MarkObjects: 0.104959 ms  DeleteObjects: 1.363189 ms)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.200190 ms
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 352.
+Total: 0.134143 ms (FindLiveObjects: 0.011263 ms CreateObjectMapping: 0.007679 ms MarkObjects: 0.113151 ms  DeleteObjects: 0.001791 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.242942 ms
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2476.
+Total: 0.415484 ms (FindLiveObjects: 0.075519 ms CreateObjectMapping: 0.024831 ms MarkObjects: 0.259070 ms  DeleteObjects: 0.055807 ms)
+
