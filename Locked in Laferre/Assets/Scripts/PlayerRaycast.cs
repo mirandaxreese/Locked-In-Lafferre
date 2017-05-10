@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerRaycast : MonoBehaviour {
 
     public float distanceToSee;
-    RaycastHit whatIHit;
+    RaycastHit clue;
 
 	// Use this for initialization
 	void Start () {
@@ -17,10 +17,12 @@ public class PlayerRaycast : MonoBehaviour {
 
         Debug.DrawRay(this.transform.position, this.transform.forward * distanceToSee, Color.magenta);
 
-        if (Physics.Raycast(this.transform.position, this.transform.forward, out whatIHit, distanceToSee) && Input.GetButton("Fire1"))
+        if (Physics.Raycast(this.transform.position, this.transform.forward, out clue, distanceToSee) && Input.GetButtonDown("Fire1"))
         {
-            Debug.Log("I touched something " + whatIHit.collider.gameObject.name);
-            //if(whatIHit.collider.gameObject.GetComponent</*name of script*/>().)
+            if(clue.collider.tag == "Clues")
+            {
+                clue.collider.gameObject.SendMessageUpwards("collision");
+            }
         }
 	}
 }
